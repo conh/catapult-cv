@@ -16,6 +16,7 @@ body {
     background: #f5f6f8; color: #1a2236;
     line-height: 1.6; font-size: 16px;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
@@ -243,8 +244,9 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 768px) {
     .hero-inner      { grid-template-columns: 1fr; }
-    .hero-right      { flex-direction: row; align-items: center; }
-    .hero-photo-wrap { width: 80px; height: 80px; }
+    .hero-right      { flex-direction: row; flex-wrap: wrap; align-items: center; }
+    .hero-photo-wrap { width: 80px; height: 80px; flex-shrink: 0; }
+    .hero-location   { white-space: normal; }
     .stats-grid      { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
