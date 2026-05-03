@@ -6,9 +6,10 @@
    Everything else is handled by style.css.
 ============================================ */
 
-/* Force white background (style.css also sets this) */
+/* Force white background and tighten top spacing */
 .attributes-section {
     background: #ffffff !important;
+    padding-top: 56px !important;
 }
 
 /* Two-column grid */
