@@ -1,86 +1,17 @@
 /* ============================================
-   VERTICE THEME OVERRIDE
-   Spend Intelligence / Procurement Dashboard
-   Teal accent on dark base
+   VERTICE — CAPABILITY STACK ONLY
+   Structural CSS for skills-layout / spec-rows.
+   All colour accents use the page's existing purple
+   (--purple: #7856FF / --purple-lt: #a78bfa from style.css).
+   Everything else is handled by style.css.
 ============================================ */
 
-:root {
-    --accent:      #00C896;
-    --accent-lt:   #4DDBBA;
-    --accent-dim:  #00C89614;
-    --accent-mid:  #00C89635;
-    --blue:        #00C896;
-    --blue-lt:     #4DDBBA;
-}
-
-
-/* Photo border */
-.hero-photo-wrap {
-    border-color: rgba(0,200,150,0.35);
-    box-shadow: 0 0 40px rgba(0,200,150,0.1), 0 16px 40px rgba(0,0,0,0.5);
-}
-
-/* Target role card */
-.target-role { border-color: rgba(0,200,150,0.2); }
-.target-badge { color: var(--accent); }
-.target-company { color: var(--accent-lt); }
-
-/* Buttons */
-.hero-btn--outline:hover {
-    border-color: var(--accent);
-    color: var(--accent-lt);
-    background: var(--accent-dim);
-}
-.btn-pdf-tag {
-    color: var(--accent-lt);
-    background: rgba(0,200,150,0.12);
-    border-color: rgba(0,200,150,0.3);
-}
-
-/* ============================================
-   STATS
-============================================ */
-.stats-section {
-    border-top-color: rgba(0,200,150,0.1);
-    border-bottom-color: rgba(0,200,150,0.06);
-}
-.stat-num { color: var(--accent); }
-.stat-card { border-color: rgba(0,200,150,0.1); }
-.stat-card:hover {
-    border-color: rgba(0,200,150,0.3);
-    box-shadow: 0 8px 32px rgba(0,200,150,0.06);
-}
-
-/* ============================================
-   ATTRIBUTES SECTION — force light background
-   Mixpanel base sets dark bg, Vertice needs light
-============================================ */
+/* Force white background (style.css also sets this) */
 .attributes-section {
     background: #ffffff !important;
 }
 
-/* ============================================
-   SECTION EYEBROWS — light sections
-============================================ */
-.attributes-section .section-eyebrow,
-.scouting-section .section-eyebrow,
-.history-section .section-eyebrow,
-.highlights-section .section-eyebrow,
-.football-section .section-eyebrow {
-    color: var(--accent);
-}
-.attributes-section .section-eyebrow::before,
-.scouting-section .section-eyebrow::before,
-.history-section .section-eyebrow::before,
-.highlights-section .section-eyebrow::before,
-.football-section .section-eyebrow::before {
-    background: var(--accent);
-}
-
-/* ============================================
-   CAPABILITY STACK — uses conharbis.com proven layout
-============================================ */
-/* Skills layout — two columns, proven from conharbis.com */
+/* Two-column grid */
 .skills-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,6 +31,7 @@
     margin-bottom: 0.25rem;
 }
 
+/* Spec rows — left column */
 .spec-row {
     display: grid;
     grid-template-columns: 56px 1fr 100px;
@@ -108,13 +40,14 @@
     padding: 11px 0;
     border-bottom: 1px solid rgba(0,0,0,0.06);
 }
+.spec-row:last-of-type { border-bottom: none; }
 
 .spec-code {
     font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif !important;
     font-size: 11px !important;
     font-weight: 800 !important;
     letter-spacing: 1px !important;
-    color: #00C896 !important;
+    color: #7856FF !important;
 }
 
 .spec-name {
@@ -125,7 +58,7 @@
 
 .spec-track {
     height: 5px !important;
-    background: rgba(0,200,150,0.12) !important;
+    background: rgba(120,86,255,0.12) !important;
     border-radius: 3px !important;
     overflow: hidden !important;
     display: block !important;
@@ -135,10 +68,11 @@
     display: block !important;
     height: 100% !important;
     width: var(--w, 80%) !important;
-    background: linear-gradient(90deg, #00C896, #4DDBBA) !important;
+    background: linear-gradient(90deg, #7856FF, #a78bfa) !important;
     border-radius: 3px !important;
 }
 
+/* Data in action — right column */
 .dia-list {
     display: flex;
     flex-direction: column;
@@ -159,7 +93,7 @@
     font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.4rem;
     font-weight: 900;
-    color: var(--accent);
+    color: #7856FF;
     line-height: 1.1;
     padding-top: 2px;
 }
@@ -191,151 +125,4 @@
 @media (max-width: 640px) {
     .spec-track { display: none; }
     .spec-row { grid-template-columns: 48px 1fr; }
-}
-
-.scorecard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: 4px;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #9ca3af;
-}
-
-.sc-row {
-    display: grid;
-    grid-template-columns: 1fr 36px 120px;
-    gap: 12px;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.sc-name {
-    font-size: 13px;
-    font-weight: 500;
-    color: #111827;
-}
-
-.sc-score {
-    font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 900;
-    color: var(--accent);
-    text-align: right;
-}
-
-.sc-bar-track {
-    height: 5px;
-    background: rgba(0,200,150,0.12);
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.sc-bar-fill {
-    display: block;
-    height: 100%;
-    width: var(--w, 80%);
-    background: linear-gradient(90deg, var(--accent), var(--accent-lt));
-    border-radius: 3px;
-    transition: width 1s ease;
-}
-
-.scorecard-disclaimer {
-    font-size: 10px;
-    color: #9ca3af;
-    font-style: italic;
-    margin-top: 12px;
-    line-height: 1.5;
-}
-
-/* Data in Action */
-.dia-head-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #9ca3af;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: 4px;
-}
-.dia-metric { color: var(--accent); }
-
-/* ============================================
-   STRATEGIC BRIEF
-============================================ */
-.big-quote { color: rgba(0,200,150,0.08); }
-.scouts-verdict { border-color: rgba(0,200,150,0.2); }
-.verdict-head { color: var(--accent); }
-.vi-dot { background: var(--accent); }
-
-/* ============================================
-   CONTRACT HISTORY (timeline)
-============================================ */
-.timeline::before {
-    background: linear-gradient(to bottom, rgba(0,200,150,0.4), rgba(0,200,150,0.04));
-}
-.tl-item::before {
-    background: var(--accent);
-    box-shadow: 0 0 10px rgba(0,200,150,0.4);
-}
-.tl-period  { color: var(--accent); }
-.tl-company { color: var(--accent); }
-.tl-tag {
-    color: var(--accent);
-    background: var(--accent-dim);
-    border-color: var(--accent-mid);
-}
-.tl-achiev li::before { color: var(--accent); }
-
-/* ============================================
-   DELIVERY RECORD (highlights)
-============================================ */
-.hl-num  { color: var(--accent); }
-.hl-club { color: var(--accent); }
-.hl-card:hover { border-color: rgba(0,200,150,0.3); }
-
-/* ============================================
-   OFF THE PITCH
-============================================ */
-.fb-period { color: var(--accent); }
-.fb-card:hover { border-color: rgba(0,200,150,0.25); }
-.fb-tag {
-    background: rgba(0,200,150,0.06);
-    border-color: rgba(0,200,150,0.2);
-    color: var(--accent);
-}
-
-/* ============================================
-   FOOTER
-============================================ */
-.contact-footer { border-top-color: rgba(0,200,150,0.12); }
-.footer-eyebrow { color: var(--accent-lt); }
-.footer-eyebrow::before { background: var(--accent-lt); }
-.agent-card { border-color: rgba(0,200,150,0.18); }
-.agent-tagline { color: var(--accent-lt); }
-.contact-chip:hover {
-    border-color: var(--accent);
-    color: var(--accent-lt);
-    background: var(--accent-dim);
-}
-
-/* ============================================
-   PRINT OVERRIDES
-============================================ */
-@media print {
-    .sc-score    { color: #007a5a !important; }
-    .tl-period   { color: #007a5a !important; }
-    .tl-company  { color: #007a5a !important; }
-    .hl-num      { color: #007a5a !important; }
-    .hl-club     { color: #007a5a !important; }
-    .fb-period   { color: #007a5a !important; }
-    .verdict-head{ color: #007a5a !important; }
-    .dia-metric  { color: #007a5a !important; }
 }
