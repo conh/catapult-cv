@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Con Harbis — Senior PMM, Intercom</title>
+    <meta name="description" content="Con Harbis applying for Senior Product Marketing Manager at Intercom. 15+ years PMM/PM in SaaS, fintech, travel, and insurance. Based in London.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Barlow+Condensed:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #f5f5f5; color: #111111;
+    line-height: 1.6; font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+:root {
+    --d-bg:       #0c0c0c;
+    --d-bg-2:     #141414;
+    --d-bg-3:     #1e1e1e;
+    --d-border:   rgba(255,255,255,0.07);
+    --d-text:     rgba(255,255,255,0.92);
+    --d-text-mid: rgba(255,255,255,0.52);
+    --d-text-dim: rgba(255,255,255,0.28);
+    --l-bg:       #f5f5f5;
+    --l-bg-2:     #ffffff;
+    --l-border:   rgba(0,0,0,0.09);
+    --l-text:     #111111;
+    --l-text-mid: #555555;
+    --l-text-dim: #999999;
+    --font-head:  'Barlow Condensed', sans-serif;
+    --font-body:  'Inter', sans-serif;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.5; transform: scale(0.7); }
+}
+
+/* NAV */
+.site-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(12,12,12,0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--d-border);
+}
+.nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 2rem; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { font-family: var(--font-head); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; color: var(--d-text); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--d-text-mid); transition: color 0.2s; }
+.nav-links a:hover { color: var(--d-text); }
+
+/* HERO */
+.hero {
+    position: relative; overflow: hidden;
+    background: var(--d-bg); padding: 5rem 2rem 4rem;
+}
+.hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 48px 48px; pointer-events: none;
+}
+.hero-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 300px;
+    gap: 56px; align-items: flex-start;
+    position: relative; z-index: 1;
+}
+.hero-left { display: flex; flex-direction: column; gap: 20px; }
+.hero-eyebrow { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--d-text-dim); }
+.hero-eyebrow-tag { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; padding: 2px 9px; font-size: 10px; color: var(--d-text-mid); }
+.hero-name { font-family: var(--font-head); font-size: clamp(2.2rem, 3.8vw, 3.5rem); font-weight: 900; letter-spacing: 0.02em; line-height: 1; color: var(--d-text); }
+.hero-headline { font-family: var(--font-head); font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 700; line-height: 1.2; color: var(--d-text); margin-top: 4px; }
+.hero-headline em { font-style: italic; color: rgba(255,255,255,0.5); font-weight: 600; }
+.hero-sub { font-size: 15px; line-height: 1.75; color: var(--d-text-mid); max-width: 560px; }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.hero-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 10px 20px; border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 6px; background: rgba(255,255,255,0.04);
+    color: var(--d-text-mid); font-size: 13.5px; font-weight: 500;
+    transition: all 0.2s; cursor: pointer; font-family: var(--font-body);
+}
+.hero-btn:hover { border-color: rgba(255,255,255,0.45); color: var(--d-text); background: rgba(255,255,255,0.08); }
+.btn-pdf-tag {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.5px; color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 3px; padding: 1px 5px;
+}
+.hero-badges { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 2px; }
+.badges-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--d-text-dim); }
+.co-badge { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--d-text-mid); padding: 4px 12px; border: 1px solid var(--d-border); border-radius: 3px; background: var(--d-bg-2); }
+
+/* HERO RIGHT — inbox art */
+.hero-right { padding-top: 4px; }
+.inbox-art {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+.inbox-art-header {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.inbox-art-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.28);
+}
+.inbox-art-controls { display: flex; gap: 5px; }
+.inbox-art-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.1); }
+.inbox-row {
+    display: grid;
+    grid-template-columns: 30px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.inbox-row:last-child { border-bottom: none; }
+.inbox-row--active { background: rgba(255,255,255,0.055); }
+.inbox-avatar { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.inbox-ghost-avatar { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.08); flex-shrink: 0; }
+.inbox-row-name { font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 3px; }
+.inbox-row-preview { font-size: 9.5px; color: rgba(255,255,255,0.3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.inbox-ghost-line { height: 7px; background: rgba(255,255,255,0.07); border-radius: 4px; margin-bottom: 5px; }
+.inbox-ghost-line:last-child { margin-bottom: 0; }
+.inbox-fin-badge {
+    font-size: 8px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 2px 6px; border-radius: 3px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.25); white-space: nowrap; align-self: flex-start; margin-top: 1px;
+}
+.inbox-fin-badge--active { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.18); background: rgba(255,255,255,0.1); }
+.hero-location { margin-top: 12px; display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--d-text-dim); }
+.loc-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.35); flex-shrink: 0; animation: pulse 2s infinite; }
+
+/* SHARED SECTION */
+.section-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
+.section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--l-text-dim); margin-bottom: 1.25rem; }
+.section-label--dark { color: var(--d-text-dim); }
+.section-title { font-family: var(--font-head); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; line-height: 1.15; color: var(--l-text); margin-bottom: 3rem; }
+.section-title--dark { color: var(--d-text); }
+.accent { font-weight: 900; }
+
+/* PILLARS — white bg */
+.pillars { background: var(--l-bg-2); border-top: 1px solid var(--l-border); border-bottom: 1px solid var(--l-border); }
+.pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.pillar-card { background: var(--l-bg); border: 1px solid var(--l-border); border-radius: 8px; padding: 1.75rem; transition: border-color 0.2s, box-shadow 0.2s; }
+.pillar-card:hover { border-color: #111; box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+.pillar-icon { color: #555; margin-bottom: 1rem; }
+.pillar-card h3 { font-size: 1rem; font-weight: 700; color: var(--l-text); margin-bottom: 0.5rem; }
+.pillar-card p { font-size: 0.875rem; color: var(--l-text-mid); line-height: 1.65; }
+
+/* WHY INTERCOM — light grey */
+.why-section { background: var(--l-bg); border-bottom: 1px solid var(--l-border); }
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.why-item { background: var(--l-bg-2); border: 1px solid var(--l-border); border-radius: 8px; padding: 1.25rem 1.5rem; transition: border-color 0.2s; }
+.why-item:hover { border-color: #111; }
+.why-item-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--l-text-dim); margin-bottom: 0.4rem; }
+.why-item-text { font-size: 0.875rem; color: var(--l-text-mid); line-height: 1.6; }
+.why-item-text strong { color: var(--l-text); }
+
+/* STATS — dark, 6 col */
+.stats { background: var(--d-bg-2); }
+.stats .section-label { color: var(--d-text-dim); }
+.stats-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
+.stat-card { background: var(--d-bg-3); border: 1px solid var(--d-border); border-radius: 8px; padding: 1.5rem 1rem; text-align: center; transition: border-color 0.2s; }
+.stat-card:hover { border-color: rgba(255,255,255,0.25); }
+.stat-num { font-family: var(--font-head); font-size: 2.4rem; font-weight: 900; color: var(--d-text); line-height: 1; margin-bottom: 0.4rem; }
+.stat-suffix { font-size: 1.6rem; }
+.stat-label { font-size: 0.8rem; font-weight: 700; color: var(--d-text); margin-bottom: 0.2rem; line-height: 1.3; }
+.stat-sub { font-size: 0.7rem; color: var(--d-text-dim); line-height: 1.4; }
+
+/* SKILLS — white, dia-items */
+.skills { background: var(--l-bg-2); border-top: 1px solid var(--l-border); border-bottom: 1px solid var(--l-border); }
+.skills-col-head { font-family: var(--font-head); font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--l-text-dim); padding-bottom: 0.75rem; border-bottom: 1px solid var(--l-border); margin-bottom: 0.25rem; }
+.dia-list { display: flex; flex-direction: column; gap: 0; }
+.dia-item { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--l-border); }
+.dia-item:last-child { border-bottom: none; }
+.dia-metric { font-family: var(--font-head); font-size: 1.4rem; font-weight: 900; color: var(--l-text); line-height: 1.1; padding-top: 2px; }
+.dia-title { font-size: 13px; font-weight: 700; color: var(--l-text); margin-bottom: 4px; }
+.dia-desc { font-size: 12.5px; color: var(--l-text-mid); line-height: 1.6; }
+
+/* PROFESSIONAL SUMMARY */
+.summary { background: var(--l-bg); border-top: 1px solid var(--l-border); border-bottom: 1px solid var(--l-border); }
+.summary-layout { display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: start; }
+.big-quote { font-family: Georgia, serif; font-size: 96px; line-height: 0.8; color: rgba(0,0,0,0.06); margin-bottom: 8px; }
+.summary-p { font-size: 14.5px; color: var(--l-text-mid); line-height: 1.8; margin-bottom: 18px; }
+.summary-p:last-child { margin-bottom: 0; }
+.verdict-card { background: var(--d-bg-2); border: 1px solid var(--d-border); border-radius: 12px; padding: 1.5rem; position: sticky; top: 80px; }
+.verdict-head { font-family: var(--font-head); font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--d-text-dim); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--d-border); }
+.verdict-item { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid var(--d-border); font-size: 13px; color: var(--d-text-mid); line-height: 1.5; }
+.verdict-item:last-child { border-bottom: none; }
+.verdict-tick { color: var(--d-text); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+
+/* CAREER */
+.career { background: var(--l-bg-2); border-top: 1px solid var(--l-border); }
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.tl-item { display: grid; grid-template-columns: 20px 1fr; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before { content: ''; position: absolute; left: 8px; top: 24px; bottom: 0; width: 1px; background: var(--l-border); }
+.tl-item:last-child::before { display: none; }
+.tl-marker { width: 16px; height: 16px; border-radius: 50%; border: 2px solid #111; background: var(--l-bg-2); margin-top: 4px; flex-shrink: 0; position: relative; z-index: 1; }
+.tl-content { background: var(--l-bg); border: 1px solid var(--l-border); border-radius: 8px; padding: 1.5rem; transition: border-color 0.2s, box-shadow 0.2s; }
+.tl-content:hover { border-color: #111; box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.tl-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem; flex-wrap: wrap; gap: 0.5rem; }
+.tl-company { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: var(--l-text); letter-spacing: 0.02em; }
+.tl-period { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: var(--l-text-dim); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tl-role { font-size: 0.9rem; font-weight: 600; color: var(--l-text); margin-bottom: 0.75rem; }
+.tl-desc { font-size: 0.875rem; color: var(--l-text-mid); line-height: 1.65; margin-bottom: 1rem; }
+.tl-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tl-bullets { margin: 0 0 1rem 1rem; padding: 0; list-style: disc; }
+.tl-bullets li { font-size: 0.875rem; color: var(--l-text-mid); line-height: 1.65; margin-bottom: 0.4rem; padding-left: 0.25rem; }
+.tl-tags span { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 3px; background: var(--l-bg-2); border: 1px solid var(--l-border); color: var(--l-text-dim); }
+.tl-sub-role { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--l-border); }
+.tl-sub-role .tl-role { color: var(--l-text-mid); font-weight: 500; }
+
+/* HIGHLIGHTS */
+.highlights { background: var(--l-bg); border-top: 1px solid var(--l-border); border-bottom: 1px solid var(--l-border); }
+.hl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.hl-card { background: var(--l-bg-2); border: 1px solid var(--l-border); border-radius: 8px; padding: 1.75rem; transition: border-color 0.2s, box-shadow 0.2s; }
+.hl-card:hover { border-color: #111; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.hl-metric { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--l-text-dim); margin-bottom: 0.75rem; }
+.hl-card h3 { font-size: 1rem; font-weight: 700; color: var(--l-text); margin-bottom: 0.5rem; line-height: 1.4; }
+.hl-card p { font-size: 0.85rem; color: var(--l-text-mid); line-height: 1.65; }
+
+/* PERSONAL — dark, two cards */
+.personal { background: var(--d-bg-2); }
+.personal .section-label { color: var(--d-text-dim); }
+.personal .section-title--dark { color: var(--d-text); }
+.personal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.personal-card { background: var(--d-bg-3); border: 1px solid var(--d-border); border-radius: 8px; padding: 2rem; transition: border-color 0.2s; }
+.personal-card:hover { border-color: rgba(255,255,255,0.2); }
+.personal-card-icon { margin-bottom: 1rem; color: rgba(255,255,255,0.4); }
+.personal-card h3 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 800; color: var(--d-text); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.personal-card p { font-size: 0.9rem; color: var(--d-text-mid); line-height: 1.7; }
+.personal-card p + p { margin-top: 0.75rem; }
+
+/* FOOTER */
+.cta-footer { background: var(--d-bg); border-top: 1px solid var(--d-border); }
+.footer-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; text-align: center; }
+.footer-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--d-text-dim); margin-bottom: 1.25rem; }
+.footer-name { font-family: var(--font-head); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; letter-spacing: 0.06em; color: var(--d-text); margin-bottom: 0.5rem; }
+.footer-tagline { font-size: 1rem; color: var(--d-text-mid); margin-bottom: 2.5rem; }
+.contact-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.contact-chip { display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.14); border-radius: 6px; background: rgba(255,255,255,0.04); color: var(--d-text-mid); font-size: 13.5px; font-weight: 500; transition: all 0.2s; cursor: pointer; font-family: var(--font-body); }
+.contact-chip:hover { border-color: rgba(255,255,255,0.45); color: var(--d-text); background: rgba(255,255,255,0.08); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .hero-inner     { grid-template-columns: 1fr 240px; gap: 40px; }
+    .pillars-grid   { grid-template-columns: repeat(2, 1fr); }
+    .stats-grid     { grid-template-columns: repeat(3, 1fr); }
+    .summary-layout { grid-template-columns: 1fr; }
+    .verdict-card   { position: static; }
+    .hl-grid        { grid-template-columns: repeat(2, 1fr); }
+    .personal-grid  { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid   { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    .pillars-grid, .hl-grid { grid-template-columns: 1fr; }
+    .nav-links a { display: none; }
+    .why-grid { grid-template-columns: 1fr; }
+}
+</style>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- GA4: Replace G-XXXXXXXXXX with intercom.conharbis.com property ID once created -->
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+    <div class="nav-inner">
+        <span class="nav-brand">CON HARBIS</span>
+        <div class="nav-links">
+            <a href="#career">Career</a>
+            <a href="#highlights">Highlights</a>
+            <a href="#summary">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+    <div class="hero-inner">
+        <div class="hero-left">
+            <div class="hero-eyebrow">
+                Applying for <span class="hero-eyebrow-tag">Senior PMM — Intercom</span>
+            </div>
+            <h1 class="hero-name">CON HARBIS</h1>
+            <h2 class="hero-headline">
+                Crowded market. Complex product.<br>
+                <em>That's where I do my best work.</em>
+            </h2>
+            <p class="hero-sub">15+ years across Product Marketing and Product Management in SaaS, fintech, travel, and insurance. I sit inside product teams, shape how products go to market, and work across regions to make it land. Based in London.</p>
+            <div class="hero-btns">
+                <a href="https://www.linkedin.com/in/conharbis/" class="hero-btn" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" style="flex-shrink:0"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:conharbis@gmail.com" class="hero-btn">
+                    <svg viewBox="0 0 20 20" fill="none" width="15" height="15" style="flex-shrink:0"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    Get in touch
+                </a>
+                <a href="2026-Con-Harbis-CV.pdf" class="hero-btn" target="_blank">
+                    <svg viewBox="0 0 20 20" fill="none" width="15" height="15" style="flex-shrink:0"><path d="M10 3v10m0 0l-3-3m3 3l3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 14v1a2 2 0 002 2h8a2 2 0 002-2v-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    Download CV <span class="btn-pdf-tag">PDF</span>
+                </a>
+            </div>
+            <div class="hero-badges">
+                <span class="badges-label">Previously at</span>
+                <span class="co-badge">Xero</span>
+                <span class="co-badge">Carsales</span>
+                <span class="co-badge">ahm</span>
+                <span class="co-badge">Jetstar</span>
+            </div>
+        </div>
+        <div class="hero-right">
+            <!-- Abstract inbox art: Con's photo as the active conversation row -->
+            <div class="inbox-art">
+                <div class="inbox-art-header">
+                    <span class="inbox-art-title">Inbox</span>
+                    <div class="inbox-art-controls">
+                        <div class="inbox-art-dot"></div>
+                        <div class="inbox-art-dot"></div>
+                        <div class="inbox-art-dot"></div>
+                    </div>
+                </div>
+                <div class="inbox-row inbox-row--active">
+                    <img class="inbox-avatar" src="images/con-headshot-032026.jpeg" alt="Con Harbis">
+                    <div>
+                        <div class="inbox-row-name">Con Harbis</div>
+                        <div class="inbox-row-preview">Building the GTM motion for Fin...</div>
+                    </div>
+                    <div class="inbox-fin-badge inbox-fin-badge--active">Fin</div>
+                </div>
+                <div class="inbox-row">
+                    <div class="inbox-ghost-avatar"></div>
+                    <div>
+                        <div class="inbox-ghost-line" style="width:64px"></div>
+                        <div class="inbox-ghost-line" style="width:110px"></div>
+                    </div>
+                    <div class="inbox-fin-badge">Fin</div>
+                </div>
+                <div class="inbox-row">
+                    <div class="inbox-ghost-avatar"></div>
+                    <div>
+                        <div class="inbox-ghost-line" style="width:52px"></div>
+                        <div class="inbox-ghost-line" style="width:130px"></div>
+                    </div>
+                    <div class="inbox-fin-badge">Fin</div>
+                </div>
+                <div class="inbox-row">
+                    <div class="inbox-ghost-avatar"></div>
+                    <div>
+                        <div class="inbox-ghost-line" style="width:78px"></div>
+                        <div class="inbox-ghost-line" style="width:96px"></div>
+                    </div>
+                    <div class="inbox-fin-badge">Fin</div>
+                </div>
+                <div class="inbox-row">
+                    <div class="inbox-ghost-avatar"></div>
+                    <div>
+                        <div class="inbox-ghost-line" style="width:58px"></div>
+                        <div class="inbox-ghost-line" style="width:120px"></div>
+                    </div>
+                    <div class="inbox-fin-badge">Fin</div>
+                </div>
+            </div>
+            <div class="hero-location">
+                <span class="loc-dot"></span>
+                London · No sponsorship required
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT I DO -->
+<section class="pillars" id="pillars">
+    <div class="section-inner">
+        <div class="section-label">WHAT I DO</div>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+                </div>
+                <h3>Positioning from First Principles</h3>
+                <p>I was the first PMM for Xero Payroll globally — no framework, no playbook. The challenge was positioning a complex, compliance-heavy product in a competitive market. Intercom's helpdesk faces the same problem: a reimagined product in a market conditioned by legacy tools. That's the kind of brief I'm built for.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <h3>AI-First GTM</h3>
+                <p>I led early positioning and announcement strategy for Xero's AI-powered features ahead of Xerocon — translating technical capability into customer-facing value. Fin needs exactly this thinking: helping buyers understand not just what it does, but why it changes how support works entirely.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>Inside Product Teams</h3>
+                <p>I sat on the Payroll leadership team with PMs, Designers, and Engineers — not beside them. The PM background means I contribute to what gets built, not just how it's positioned. That proximity shapes better products and sharper GTM because the brief starts earlier.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                </div>
+                <h3>Full-Cycle GTM</h3>
+                <p>From market segmentation and ICP development through to activation experiments and sales enablement. I've run the full loop across three markets and seven years — not just the launch moment, but the ongoing GTM motion that compounds over time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY INTERCOM -->
+<section class="why-section" id="why">
+    <div class="section-inner">
+        <div class="section-label">WHY INTERCOM</div>
+        <h2 class="section-title" style="margin-bottom: 2rem;">A direct fit</h2>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-item-label">AI-native product</div>
+                <div class="why-item-text">Fin is the kind of product PMMs dream about positioning. <strong>AI that actually does the job, not AI as a feature flag.</strong> The GTM challenge is helping buyers understand why it's genuinely different — that's first-principles positioning.</div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-label">First-principles problem</div>
+                <div class="why-item-text">The helpdesk market is being reimagined. Incumbents are legacy. The PMM problem is helping buyers see past the familiar and understand why switching matters now. <strong>That's exactly the brief I had at Xero Payroll.</strong></div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-label">Did it at Xero</div>
+                <div class="why-item-text">First PMM for a complex integrated product in a competitive market. <strong>Built positioning that moved the market.</strong> Scaled GTM motion across AU, NZ, and UK from no playbook to a repeatable system.</div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-label">Product team proximity</div>
+                <div class="why-item-text">I sat on the Payroll leadership team alongside PMs, Designers, and Engineers. <strong>I want to shape what gets built, not just how it's sold.</strong> That's where the best GTM starts — before the brief is written.</div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-label">AI positioning experience</div>
+                <div class="why-item-text">Led Xero's AI feature positioning and announcement strategy at Xerocon. <strong>I know how to turn technical capability into a market narrative</strong> that a sales team can explain and a buyer can actually understand.</div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-label">London-based</div>
+                <div class="why-item-text"><strong>Based in London, no sponsorship required.</strong> Available immediately. Not a relocation conversation.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS — 6 metrics, dark -->
+<section class="stats" id="stats">
+    <div class="section-inner">
+        <div class="section-label">BY THE NUMBERS</div>
+        <div class="stats-grid">
+            <div class="stat-card" data-target="154">
+                <div class="stat-num"><span class="cval">0</span><span class="stat-suffix">%</span></div>
+                <div class="stat-label">Revenue growth</div>
+                <div class="stat-sub">Contributed to at Xero across UK, AU, NZ</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">$400<span class="stat-suffix">M+</span></div>
+                <div class="stat-label">Portfolio managed</div>
+                <div class="stat-sub">Xero Payroll across three markets</div>
+            </div>
+            <div class="stat-card" data-target="18">
+                <div class="stat-num"><span class="cval">0</span><span class="stat-suffix">%</span></div>
+                <div class="stat-label">Activation increase</div>
+                <div class="stat-sub">In six months through GTM experiments</div>
+            </div>
+            <div class="stat-card" data-target="13">
+                <div class="stat-num"><span class="cval">0</span><span class="stat-suffix">%</span></div>
+                <div class="stat-label">UK growth YoY</div>
+                <div class="stat-sub">Xero Payroll, coordinated GTM strategy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">$6<span class="stat-suffix">M+</span></div>
+                <div class="stat-label">Revenue at launch</div>
+                <div class="stat-sub">Standalone payroll, zero to market in 3 months</div>
+            </div>
+            <div class="stat-card" data-target="15">
+                <div class="stat-num"><span class="cval">0</span><span class="stat-suffix">+</span></div>
+                <div class="stat-label">Years across PMM and PM</div>
+                <div class="stat-sub">SaaS, fintech, travel, insurance</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS & EXPERTISE -->
+<section class="skills" id="skills">
+    <div class="section-inner">
+        <div class="section-label">SKILLS &amp; EXPERTISE</div>
+        <h2 class="section-title">Where I'm <span class="accent">strongest</span></h2>
+        <div>
+            <div class="skills-col-head">Skills in action</div>
+            <div class="dia-list">
+                <div class="dia-item">
+                    <div class="dia-metric">154%</div>
+                    <div>
+                        <div class="dia-title">Revenue growth via GTM alignment</div>
+                        <div class="dia-desc">Helped drive 154% revenue growth across AU, NZ and UK through strategic positioning and aligning Product, Sales, and Marketing on a coherent market narrative and GTM execution.</div>
+                    </div>
+                </div>
+                <div class="dia-item">
+                    <div class="dia-metric">ICP</div>
+                    <div>
+                        <div class="dia-title">Segmentation to market strategy</div>
+                        <div class="dia-desc">Cohort analysis and market data shaped UK ICP development and opportunity modelling, directly informing the annual GTM strategy and resource allocation across the Payroll portfolio.</div>
+                    </div>
+                </div>
+                <div class="dia-item">
+                    <div class="dia-metric">+18%</div>
+                    <div>
+                        <div class="dia-title">Activation uplift via GTM experiments</div>
+                        <div class="dia-desc">Ran quarterly experiment programmes with GTM and Product teams, testing offers, messaging, activation flows, and channel mix to drive an 18% activation increase across UK Payroll in six months.</div>
+                    </div>
+                </div>
+                <div class="dia-item">
+                    <div class="dia-metric">NA</div>
+                    <div>
+                        <div class="dia-title">North American market entry</div>
+                        <div class="dia-desc">Contributed to Canadian market entry evaluation, leading competitive and market analysis that informed the build/buy/partner decision. Led the GTM kickoff when the US partnership direction was confirmed.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROFESSIONAL SUMMARY -->
+<section class="summary" id="summary">
+    <div class="section-inner">
+        <div class="section-label">PROFESSIONAL SUMMARY</div>
+        <div class="summary-layout">
+            <div>
+                <div class="big-quote">"</div>
+                <p class="summary-p">At Xero I came in as the first PMM for payroll globally: no framework, no playbook. I built the positioning, messaging, GTM frameworks, and sales enablement that helped drive 154% revenue growth across a $400M+ portfolio spanning UK, Australia, and New Zealand.</p>
+                <p class="summary-p">The work most relevant to Intercom is the AI positioning: I led early positioning and announcement strategy for Xero's AI-powered features ahead of Xerocon, translating technical capability into something the sales team could explain and buyers could actually understand. And the ICP and segmentation work — partnering with the Strategy team to identify target customer cohorts and model opportunity by segment, translating that into annual GTM priorities. That's the kind of strategic grounding that makes GTM motion compound over time.</p>
+                <p class="summary-p">Before moving into product marketing I spent years as a Senior Product Manager at Carsales, and then at Xero as Product Manager for NZ Payroll. It changes how I work with product teams — I understand the build trade-offs, the roadmap constraints, the engineering reality. That proximity makes for better positioning, because I know what the product can actually deliver.</p>
+            </div>
+            <div>
+                <div class="verdict-card">
+                    <div class="verdict-head">Quick take</div>
+                    <div class="verdict-item"><span class="verdict-tick">✓</span>First PMM for Xero Payroll globally — built the positioning playbook in a crowded market</div>
+                    <div class="verdict-item"><span class="verdict-tick">✓</span>Led AI feature positioning and announcement strategy at Xerocon</div>
+                    <div class="verdict-item"><span class="verdict-tick">✓</span>Sits on product leadership teams, not just beside them</div>
+                    <div class="verdict-item"><span class="verdict-tick">✓</span>Full-cycle GTM: segmentation → ICP → experiments → enablement</div>
+                    <div class="verdict-item"><span class="verdict-tick">✓</span>Complex B2B SaaS: compliance-heavy, multi-region, educated buyers</div>
+                    <div class="verdict-item"><span class="verdict-tick">✓</span>London-based, no sponsorship required</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CAREER HISTORY -->
+<section class="career" id="career">
+    <div class="section-inner">
+        <div class="section-label">CAREER HISTORY</div>
+        <div class="timeline">
+
+            <div class="tl-item">
+                <div class="tl-marker"></div>
+                <div class="tl-content">
+                    <div class="tl-head">
+                        <div class="tl-company">Xero</div>
+                        <div class="tl-period">Mar 2022 – Apr 2026</div>
+                    </div>
+                    <div class="tl-role">Senior Global Product Marketing Manager</div>
+                    <p class="tl-desc">Led global product marketing strategy for Xero Payroll and employee management offerings across AU, NZ, and UK. Core member of the Payroll leadership team alongside PMs, Designers and Engineers. The payroll platform is a $400M+ revenue portfolio processing $150B+ in annual payroll for 3M+ employees globally.</p>
+                    <ul class="tl-bullets">
+                        <li>Grew UK product 13% YoY with activations up 18% in 6 months through quarterly GTM experiments with Product and Sales teams</li>
+                        <li>Led early positioning and announcement strategy for Xero's AI-powered features, translating technical capabilities into customer-facing value</li>
+                        <li>Led UK market segmentation and ICP development, partnering with Strategy team on opportunity modelling that shaped annual GTM strategy</li>
+                        <li>Contributed to Canadian market entry evaluation as part of the new growth markets team, leading competitive and market analysis that informed the build/buy/partner decision. Led GTM kickoff for US market entry following confirmation of new partnership direction</li>
+                        <li>Led Xero Payroll messaging and presence across Xerocon, regional roadshows, and accounting industry events, including beta recruitment programmes ahead of product launches</li>
+                    </ul>
+                    <div class="tl-tags"><span>Global GTM</span><span>Payroll</span><span>Roadmap Influence</span><span>AI Positioning</span><span>ICP Development</span><span>Xerocon</span></div>
+
+                    <div class="tl-sub-role">
+                        <div class="tl-head">
+                            <div class="tl-role">Global Product Marketing Manager</div>
+                            <div class="tl-period">Sep 2018 – Mar 2022</div>
+                        </div>
+                        <p class="tl-desc">First PMM for Xero Payroll globally. Came in with no inherited playbook and built the positioning, messaging frameworks, GTM playbooks and sales enablement across AU, NZ and UK.</p>
+                        <ul class="tl-bullets">
+                            <li>Helped drive 154% revenue growth across AU, NZ and UK through strategic positioning and aligning product and sales teams on GTM execution</li>
+                            <li>Launched standalone payroll product in 3 months, scaling to $6M+ annual revenue and establishing Xero as market leader</li>
+                            <li>Established PMM processes and frameworks that improved how products and features were launched across the organisation</li>
+                            <li>Created GTM playbooks and sales enablement materials across all regions</li>
+                        </ul>
+                        <div class="tl-tags"><span>Positioning</span><span>GTM Playbooks</span><span>Sales Enablement</span><span>Multi-region</span></div>
+                    </div>
+
+                    <div class="tl-sub-role">
+                        <div class="tl-head">
+                            <div class="tl-role">Product Manager, NZ Payroll</div>
+                            <div class="tl-period">Mar 2017 – Sep 2018</div>
+                        </div>
+                        <p class="tl-desc">Led NZ Payroll product within a global team. Defined product vision and 3-year strategy through market research and stakeholder consultation, managing delivery using agile and lean approaches.</p>
+                        <ul class="tl-bullets">
+                            <li>Drove subscribers by 80% and employees paid by 87%, directly driving revenue growth and market expansion</li>
+                            <li>Launched Contractors feature that became the global template, closing a critical gap in the NZ market and rolling out to all international regions</li>
+                        </ul>
+                        <div class="tl-tags"><span>Product Management</span><span>Roadmap</span><span>Agile</span><span>NZ Market</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-marker"></div>
+                <div class="tl-content">
+                    <div class="tl-head">
+                        <div class="tl-company">ahm (Medibank)</div>
+                        <div class="tl-period">Dec 2015 – Oct 2016</div>
+                    </div>
+                    <div class="tl-role">Digital Product Manager</div>
+                    <p class="tl-desc">Led digital transformation, guiding cross-functional teams to deliver customer-focused experiences aligned with digital-first strategy. Developed CRO roadmap to improve conversion and customer experience.</p>
+                    <ul class="tl-bullets">
+                        <li>Reversed declining conversion trends with 19% increase in online purchases through data-driven purchase form redesign</li>
+                        <li>Drove 12 to 13% conversion uplift by building a resume journey feature for returning visitors</li>
+                    </ul>
+                    <div class="tl-tags"><span>CRO</span><span>Digital Product</span><span>Conversion</span><span>Health Insurance</span></div>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-marker"></div>
+                <div class="tl-content">
+                    <div class="tl-head">
+                        <div class="tl-company">Carsales</div>
+                        <div class="tl-period">Apr 2010 – Dec 2015</div>
+                    </div>
+                    <div class="tl-role">Senior Product Manager</div>
+                    <p class="tl-desc">Managed product portfolio of 10 market-leading online brands, driving revenue growth, product innovation, and UX improvements while leading cross-functional teams across Product, UX, Marketing, Sales, and Customer Experience.</p>
+                    <ul class="tl-bullets">
+                        <li>Launched complete quicksales website redesign and new iOS app within a 3-month timeframe</li>
+                        <li>Supported SEO/SEM strategy that kept multiple brands at number one market positions</li>
+                        <li>Recognised for exceptional performance with Product &amp; Technology Monthly Award</li>
+                    </ul>
+                    <div class="tl-tags"><span>Product Strategy</span><span>Marketplace</span><span>Team Leadership</span><span>Agile</span></div>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-marker"></div>
+                <div class="tl-content">
+                    <div class="tl-head">
+                        <div class="tl-company">Jetstar</div>
+                        <div class="tl-period">Sep 2007 – Apr 2010</div>
+                    </div>
+                    <div class="tl-role">eCommerce Product Manager</div>
+                    <p class="tl-desc">Drove eCommerce innovation for Jetstar's digital booking, mobile, and airport experiences. Managed development of 13 multi-language web and mobile sites.</p>
+                    <ul class="tl-bullets">
+                        <li>Managed implementation of world-first SMS Boarding Pass solution into Web Check-in system</li>
+                        <li>Launched Jetstar's first mobile websites across multiple languages in the early smartphone era</li>
+                        <li>Created new revenue streams through flexible booking and seat selection products</li>
+                    </ul>
+                    <div class="tl-tags"><span>eCommerce</span><span>Travel</span><span>Mobile</span><span>Digital</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- KEY HIGHLIGHTS -->
+<section class="highlights" id="highlights">
+    <div class="section-inner">
+        <div class="section-label">KEY HIGHLIGHTS</div>
+        <h2 class="section-title">Work I'm <span class="accent">proud of</span></h2>
+        <div class="hl-grid">
+            <div class="hl-card">
+                <div class="hl-metric">XERO — UK GTM</div>
+                <h3>Helped grow UK payroll 13% YoY, with activations up 18% in six months</h3>
+                <p>Ran a quarterly experiment programme with GTM and Product teams, testing messaging, activation flows, and channel mix to find what moved the numbers.</p>
+            </div>
+            <div class="hl-card">
+                <div class="hl-metric">XERO — MARKET STRATEGY</div>
+                <h3>Defined Xero's UK segmentation and ICP</h3>
+                <p>Partnered with the Strategy team to identify target customer cohorts and model opportunity by segment, translating that into annual GTM priorities.</p>
+            </div>
+            <div class="hl-card">
+                <div class="hl-metric">XERO — PRODUCT LAUNCH</div>
+                <h3>Took a standalone payroll product from zero to $6M+ ARR</h3>
+                <p>Launched a standalone payroll product in 3 months, scaling to $6M+ ARR. Ran service design workshops to support launch execution. Built the GTM assets: welcome emails, call scripts, sales brochures, and messaging frameworks.</p>
+            </div>
+            <div class="hl-card">
+                <div class="hl-metric">XERO — AI GTM</div>
+                <h3>Led early positioning and announcement strategy for Xero's AI-powered features ahead of Xerocon</h3>
+                <p>Translated technical capabilities into customer-facing value and competitive differentiation, making AI features something the sales team could explain and buyers could actually understand.</p>
+            </div>
+            <div class="hl-card">
+                <div class="hl-metric">XERO — MARKET ENTRY</div>
+                <h3>Contributed to North American market entry across two separate initiatives</h3>
+                <p>Led competitive and market analysis for the Canadian market entry evaluation, informing the build/buy/partner decision. When a new partnership direction was confirmed for the US, led the GTM kickoff to activate it commercially.</p>
+            </div>
+            <div class="hl-card">
+                <div class="hl-metric">FOUNDER &amp; DIRECTOR</div>
+                <h3>Founded a youth football coaching business and ran it for three years alongside a full-time senior role</h3>
+                <p>Built The Football Practice from scratch: brand, curriculum, booking system, and customer experience. Scaled to 50+ players across five weekly sessions. Ran profitably for three years. Closed by choice.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PERSONAL BACKGROUND -->
+<section class="personal" id="personal">
+    <div class="section-inner">
+        <div class="section-label">PERSONAL BACKGROUND</div>
+        <h2 class="section-title section-title--dark">A bit <span class="accent">about me</span></h2>
+        <div class="personal-grid">
+            <div class="personal-card">
+                <div class="personal-card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><rect x="2" y="10" width="20" height="5" rx="1"/><rect x="2" y="17" width="20" height="5" rx="1"/></svg>
+                </div>
+                <h3>Product Marketing Leader</h3>
+                <p>15+ years across product, commercial, and customer. Before moving into product marketing I spent years as a Senior Product Manager at Carsales, and then at Xero as Product Manager for NZ Payroll. It changes how I work with product teams and how I think about what the market actually needs before we build anything.</p>
+                <p>My career has involved complex SaaS: compliance-heavy products, multi-region markets, buyers who need educating before they'll move.</p>
+            </div>
+            <div class="personal-card">
+                <div class="personal-card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+                </div>
+                <h3>Founder &amp; Director, The Football Practice</h3>
+                <p>I founded and ran The Football Practice, a youth football coaching business, for three years alongside a full-time senior role at Xero. Built it from nothing: brand, curriculum, operations, customer experience. Scaled to 50+ players across five weekly sessions before closing by choice.</p>
+                <p>I spotted a gap in the market, built something from scratch to fill it, and learned what worked by watching what kids and parents actually responded to.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="cta-footer" id="contact">
+    <div class="footer-inner">
+        <div class="footer-eyebrow">GET IN TOUCH</div>
+        <div class="footer-name">CON HARBIS</div>
+        <div class="footer-tagline">Senior PMM — open to Intercom and roles in London</div>
+        <div class="contact-chips">
+            <a href="https://www.linkedin.com/in/conharbis/" class="contact-chip" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" style="flex-shrink:0"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+            </a>
+            <a href="mailto:conharbis@gmail.com" class="contact-chip">
+                <svg viewBox="0 0 20 20" fill="none" width="15" height="15" style="flex-shrink:0"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Get in touch
+            </a>
+            <a href="2026-Con-Harbis-CV.pdf" class="contact-chip" target="_blank">
+                <svg viewBox="0 0 20 20" fill="none" width="15" height="15" style="flex-shrink:0"><path d="M10 3v10m0 0l-3-3m3 3l3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 14v1a2 2 0 002 2h8a2 2 0 002-2v-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Download CV <span class="btn-pdf-tag">PDF</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+    const cards = document.querySelectorAll('.stat-card[data-target]');
+    const seen = new Set();
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting && !seen.has(e.target)) {
+                seen.add(e.target);
+                const target = +e.target.dataset.target;
+                const el = e.target.querySelector('.cval');
+                if (!el) return;
+                let start = 0;
+                const dur = 1600;
+                const step = ts => {
+                    if (!start) start = ts;
+                    const p = Math.min((ts - start) / dur, 1);
+                    const ease = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.round(ease * target);
+                    if (p < 1) requestAnimationFrame(step);
+                };
+                requestAnimationFrame(step);
+            }
+        });
+    }, { threshold: 0.3 });
+    cards.forEach(c => io.observe(c));
+})();
+</script>
+
+</body>
+</html>
