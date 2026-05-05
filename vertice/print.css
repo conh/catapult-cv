@@ -1,0 +1,336 @@
+/* ============================================
+   PRINT STYLESHEET
+   Linked with media="print" — all rules apply
+   only when printing / generating PDF
+============================================ */
+
+/* Page setup */
+@page {
+    size: A4;
+    margin: 18mm 20mm 18mm 20mm;
+}
+
+/* ---- Show/hide ---- */
+.screen-only  { display: none !important; }
+.print-only   { display: block !important; }
+
+/* ---- Base reset ---- */
+* {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+    border-color: #ccc !important;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+}
+
+a { color: #000 !important; text-decoration: none; }
+
+.container { max-width: 100%; padding: 0; }
+
+/* ============================================
+   PRINT HEADER
+============================================ */
+.print-header {
+    margin-bottom: 14pt;
+    padding-bottom: 10pt;
+}
+.print-header h1 {
+    font-family: Arial, sans-serif;
+    font-size: 21pt;
+    font-weight: 700;
+    margin-bottom: 4pt;
+    color: #000 !important;
+}
+.print-contact {
+    font-size: 9.5pt;
+    color: #333 !important;
+    margin-bottom: 5pt;
+}
+.print-contact .sep { color: #aaa !important; }
+.print-tagline {
+    font-family: Arial, sans-serif;
+    font-size: 11.5pt;
+    font-weight: 400;
+    color: #333 !important;
+    margin-bottom: 4pt;
+}
+.hero-tagline {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #000 !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 8pt;
+    display: block !important;
+}
+.hero-tagline-sub {
+    color: #555 !important;
+    font-weight: 400;
+}
+.print-headline {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    font-style: italic;
+    color: #333 !important;
+    margin-bottom: 8pt;
+}
+.print-rule {
+    border: none !important;
+    border-top: 1.5pt solid #000 !important;
+    margin: 0;
+}
+
+/* ============================================
+   SECTION PRINT HEADINGS
+============================================ */
+.section-print-heading { display: block !important; }
+.section-print-heading h3 {
+    font-family: Arial, sans-serif;
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6pt;
+    color: #000 !important;
+    border-bottom: 1pt solid #999 !important;
+    padding-bottom: 3pt;
+    margin: 13pt 0 7pt 0;
+}
+
+/* ============================================
+   STATS SECTION — hide in print
+   (values shown inline in Summary instead)
+============================================ */
+.stats-section { display: none !important; }
+
+/* ============================================
+   ATTRIBUTES SECTION
+============================================ */
+.attributes-section { padding: 0; }
+.attributes-layout { display: block; }
+.attr-bars { display: block; }
+.attr-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2pt 0;
+    border-bottom: 0.5pt dotted #ccc !important;
+}
+.attr-meta { display: flex; justify-content: space-between; width: 100%; }
+.attr-name { font-size: 10pt; color: #333 !important; }
+.attr-score {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #000 !important;
+    min-width: unset;
+}
+
+.skills-list {
+    display: block !important;
+    font-size: 10pt;
+    color: #333 !important;
+    line-height: 1.7;
+    margin-top: 6pt;
+}
+
+/* ============================================
+   SCOUTING REPORT
+============================================ */
+.scouting-section { padding: 0; border: none; }
+.scouting-layout { display: block; }
+.scouting-p {
+    font-size: 10.5pt;
+    color: #333 !important;
+    margin-bottom: 6pt;
+    line-height: 1.6;
+}
+
+/* ============================================
+   CLUB HISTORY / TIMELINE
+============================================ */
+.history-section { padding: 0; }
+.timeline::before { display: none; }
+.tl-item {
+    display: block !important;
+    padding: 8pt 0;
+    border-bottom: 0.5pt solid #ddd !important;
+    page-break-inside: avoid;
+    opacity: 1 !important;
+    transform: none !important;
+}
+.tl-item:last-child { border-bottom: none !important; }
+.tl-item::before { display: none; }
+
+.tl-period {
+    font-size: 8.5pt;
+    color: #555 !important;
+    font-weight: 700;
+    display: inline;
+    letter-spacing: 0;
+}
+
+.tl-header {
+    display: block;
+    margin-bottom: 3pt;
+}
+.tl-role {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #000 !important;
+    display: inline;
+}
+.tl-company {
+    font-family: Arial, sans-serif;
+    font-size: 10.5pt;
+    color: #333 !important;
+    display: inline;
+}
+.tl-company::before { content: ' · '; color: #999 !important; }
+
+.tl-summary {
+    font-size: 10pt;
+    color: #444 !important;
+    margin: 2pt 0 4pt 0;
+    line-height: 1.5;
+}
+
+.tl-achiev { list-style: none !important; }
+.tl-achiev li {
+    font-size: 10pt;
+    color: #333 !important;
+    padding-left: 10pt;
+    margin-bottom: 2pt;
+    line-height: 1.5;
+}
+.tl-achiev li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: #666 !important;
+}
+
+/* ============================================
+   SEASON HIGHLIGHTS
+============================================ */
+.highlights-section { padding: 0; border: none; }
+.highlights-grid { display: block !important; }
+
+.hl-card {
+    display: flex !important;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4pt;
+    padding: 3pt 0;
+    border: none !important;
+    border-bottom: 0.5pt dotted #ddd !important;
+    border-radius: 0;
+    opacity: 1 !important;
+    transform: none !important;
+    page-break-inside: avoid;
+}
+.hl-card::before { display: none; }
+.hl-card:last-child { border-bottom: none !important; }
+
+.hl-num {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #000 !important;
+    min-width: 30pt;
+}
+.hl-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #000 !important;
+}
+.hl-title::after { content: ' —'; }
+.hl-desc {
+    font-size: 10pt;
+    color: #444 !important;
+    margin: 0;
+    line-height: 1.4;
+    flex-basis: 100%;
+    padding-left: 30pt;
+}
+.hl-club {
+    font-size: 9pt;
+    color: #666 !important;
+    font-style: italic;
+    flex-basis: 100%;
+    padding-left: 30pt;
+    letter-spacing: 0;
+}
+
+/* ============================================
+   FOOTBALL SECTION
+============================================ */
+.football-section { padding: 0; }
+.football-grid { display: block !important; }
+
+.fb-card {
+    display: block !important;
+    border: none !important;
+    border-bottom: 0.5pt solid #ddd !important;
+    border-radius: 0;
+    padding: 6pt 0;
+    page-break-inside: avoid;
+}
+.fb-card:last-child { border-bottom: none !important; }
+.fb-card::after { display: none; }
+.fb-icon { display: none; }
+.fb-period {
+    font-size: 8.5pt;
+    color: #555 !important;
+    display: inline;
+    letter-spacing: 0;
+}
+.fb-title {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #000 !important;
+    display: block;
+    margin-top: 2pt;
+    margin-bottom: 1pt;
+}
+.fb-loc {
+    font-size: 10pt;
+    color: #555 !important;
+    margin: 0 0 3pt 0;
+}
+.fb-desc {
+    font-size: 10pt;
+    color: #333 !important;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.fb-tags { display: none; }
+
+/* ============================================
+   HIDE DECORATIVE / INTERACTIVE ELEMENTS
+============================================ */
+.hero,
+.contact-footer,
+.hero-grid-bg,
+.big-quote,
+.scouts-verdict,
+.football-intro,
+.section-eyebrow,
+.vi-dot,
+.fb-tags,
+.radar-wrap,
+.attr-track,
+.stats-section {
+    display: none !important;
+}
