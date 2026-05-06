@@ -107,54 +107,92 @@ img { max-width: 100%; display: block; }
 .badges-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--d-text-dim); }
 .co-badge { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--d-text-mid); padding: 4px 12px; border: 1px solid var(--d-border); border-radius: 3px; background: var(--d-bg-2); }
 
-/* HERO RIGHT — inbox art */
+/* HERO RIGHT — Fin AI art */
 .hero-right { padding-top: 4px; }
-.inbox-art {
+.fin-art {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.09);
     border-radius: 12px;
     overflow: hidden;
     width: 100%;
 }
-.inbox-art-header {
+.fin-art-header {
     padding: 10px 14px;
     border-bottom: 1px solid rgba(255,255,255,0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.inbox-art-title {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.28);
+.fin-art-logo {
+    font-family: var(--font-head);
+    font-size: 13px; font-weight: 900; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.75);
 }
-.inbox-art-controls { display: flex; gap: 5px; }
-.inbox-art-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.1); }
-.inbox-row {
+.fin-art-live {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+    color: var(--orange); display: flex; align-items: center; gap: 4px;
+}
+.fin-art-live-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--orange); animation: pulse 2s infinite;
+}
+.fin-resolution {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: baseline; gap: 8px;
+}
+.fin-resolution-num {
+    font-family: var(--font-head);
+    font-size: 2.2rem; font-weight: 900;
+    color: var(--orange); line-height: 1;
+}
+.fin-resolution-label {
+    font-size: 9.5px; color: rgba(255,255,255,0.35); font-weight: 500; line-height: 1.4;
+}
+.fin-thread {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; flex-direction: column; gap: 8px;
+}
+.fin-msg { display: flex; align-items: flex-end; gap: 7px; }
+.fin-msg--fin { flex-direction: row-reverse; }
+.fin-msg-avatar { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.fin-msg-bubble {
+    background: rgba(255,255,255,0.07);
+    border-radius: 8px 8px 8px 2px;
+    padding: 7px 10px;
+}
+.fin-msg-bubble--fin {
+    background: rgba(255,107,36,0.12);
+    border: 1px solid rgba(255,107,36,0.2);
+    border-radius: 8px 8px 2px 8px;
+}
+.fin-ghost-line { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; margin-bottom: 4px; }
+.fin-ghost-line:last-child { margin-bottom: 0; }
+.fin-ghost-line--orange { background: rgba(255,107,36,0.28); }
+.fin-badge-sm {
+    font-size: 8px; font-weight: 800; letter-spacing: 0.06em;
+    padding: 2px 6px; border-radius: 3px; flex-shrink: 0; align-self: flex-start;
+    background: rgba(255,107,36,0.15); border: 1px solid rgba(255,107,36,0.3);
+    color: var(--orange);
+}
+.fin-resolved {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.06em;
+    color: var(--orange); text-align: center; padding-top: 2px;
+}
+.fin-activity { display: flex; flex-direction: column; }
+.fin-activity-row {
     display: grid;
-    grid-template-columns: 30px 1fr auto;
-    gap: 10px;
-    align-items: center;
-    padding: 10px 14px;
+    grid-template-columns: 22px 1fr 22px;
+    gap: 8px; align-items: center;
+    padding: 8px 14px;
     border-bottom: 1px solid rgba(255,255,255,0.04);
 }
-.inbox-row:last-child { border-bottom: none; }
-.inbox-row--active { background: rgba(255,107,36,0.06); }
-.inbox-avatar { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-.inbox-ghost-avatar { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.08); flex-shrink: 0; }
-.inbox-row-name { font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 3px; }
-.inbox-row-preview { font-size: 9.5px; color: rgba(255,255,255,0.3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.inbox-ghost-line { height: 7px; background: rgba(255,255,255,0.07); border-radius: 4px; margin-bottom: 5px; }
-.inbox-ghost-line:last-child { margin-bottom: 0; }
-.inbox-fin-badge {
-    font-size: 8px; font-weight: 700; letter-spacing: 0.04em;
-    padding: 2px 6px; border-radius: 3px;
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.25); white-space: nowrap; align-self: flex-start; margin-top: 1px;
-}
-.inbox-fin-badge--active { color: var(--orange); border-color: rgba(255,107,36,0.4); background: rgba(255,107,36,0.12); }
+.fin-activity-row:last-child { border-bottom: none; }
+.fin-ghost-av { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.07); flex-shrink: 0; }
+.fin-ghost-line-sm { height: 6px; background: rgba(255,255,255,0.07); border-radius: 3px; margin-bottom: 3px; }
+.fin-ghost-line-sm:last-child { margin-bottom: 0; }
+.fin-check { font-size: 10px; color: var(--orange); font-weight: 700; text-align: center; }
 .hero-location { margin-top: 12px; display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--d-text-dim); }
 .loc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); flex-shrink: 0; animation: pulse 2s infinite; }
 
@@ -346,55 +384,61 @@ img { max-width: 100%; display: block; }
             </div>
         </div>
         <div class="hero-right">
-            <!-- Abstract inbox art: Con's photo as the active conversation row -->
-            <div class="inbox-art">
-                <div class="inbox-art-header">
-                    <span class="inbox-art-title">Inbox</span>
-                    <div class="inbox-art-controls">
-                        <div class="inbox-art-dot"></div>
-                        <div class="inbox-art-dot"></div>
-                        <div class="inbox-art-dot"></div>
-                    </div>
+            <!-- Fin AI resolution art -->
+            <div class="fin-art">
+                <div class="fin-art-header">
+                    <span class="fin-art-logo">FIN AI</span>
+                    <span class="fin-art-live"><span class="fin-art-live-dot"></span>LIVE</span>
                 </div>
-                <div class="inbox-row inbox-row--active">
-                    <img class="inbox-avatar" src="images/con-headshot-032026.jpeg" alt="Con Harbis">
-                    <div>
-                        <div class="inbox-row-name">Con Harbis</div>
-                        <div class="inbox-row-preview">Building the GTM motion for Fin...</div>
-                    </div>
-                    <div class="inbox-fin-badge inbox-fin-badge--active">Fin</div>
+                <div class="fin-resolution">
+                    <div class="fin-resolution-num">86%</div>
+                    <div class="fin-resolution-label">resolution rate<br>this month</div>
                 </div>
-                <div class="inbox-row">
-                    <div class="inbox-ghost-avatar"></div>
-                    <div>
-                        <div class="inbox-ghost-line" style="width:64px"></div>
-                        <div class="inbox-ghost-line" style="width:110px"></div>
+                <!-- Conversation thread: Con's query → Fin resolves -->
+                <div class="fin-thread">
+                    <div class="fin-msg">
+                        <img class="fin-msg-avatar" src="images/con-headshot-032026.jpeg" alt="Con Harbis">
+                        <div class="fin-msg-bubble">
+                            <div class="fin-ghost-line" style="width:115px"></div>
+                            <div class="fin-ghost-line" style="width:78px"></div>
+                        </div>
                     </div>
-                    <div class="inbox-fin-badge">Fin</div>
+                    <div class="fin-msg fin-msg--fin">
+                        <div class="fin-badge-sm">Fin</div>
+                        <div class="fin-msg-bubble fin-msg-bubble--fin">
+                            <div class="fin-ghost-line fin-ghost-line--orange" style="width:125px"></div>
+                            <div class="fin-ghost-line fin-ghost-line--orange" style="width:88px"></div>
+                            <div class="fin-ghost-line fin-ghost-line--orange" style="width:100px"></div>
+                        </div>
+                    </div>
+                    <div class="fin-resolved">✓ Resolved by Fin</div>
                 </div>
-                <div class="inbox-row">
-                    <div class="inbox-ghost-avatar"></div>
-                    <div>
-                        <div class="inbox-ghost-line" style="width:52px"></div>
-                        <div class="inbox-ghost-line" style="width:130px"></div>
+                <!-- Ghost activity: other conversations being resolved -->
+                <div class="fin-activity">
+                    <div class="fin-activity-row">
+                        <div class="fin-ghost-av"></div>
+                        <div>
+                            <div class="fin-ghost-line-sm" style="width:68px"></div>
+                            <div class="fin-ghost-line-sm" style="width:102px"></div>
+                        </div>
+                        <div class="fin-check">✓</div>
                     </div>
-                    <div class="inbox-fin-badge">Fin</div>
-                </div>
-                <div class="inbox-row">
-                    <div class="inbox-ghost-avatar"></div>
-                    <div>
-                        <div class="inbox-ghost-line" style="width:78px"></div>
-                        <div class="inbox-ghost-line" style="width:96px"></div>
+                    <div class="fin-activity-row">
+                        <div class="fin-ghost-av"></div>
+                        <div>
+                            <div class="fin-ghost-line-sm" style="width:54px"></div>
+                            <div class="fin-ghost-line-sm" style="width:88px"></div>
+                        </div>
+                        <div class="fin-check">✓</div>
                     </div>
-                    <div class="inbox-fin-badge">Fin</div>
-                </div>
-                <div class="inbox-row">
-                    <div class="inbox-ghost-avatar"></div>
-                    <div>
-                        <div class="inbox-ghost-line" style="width:58px"></div>
-                        <div class="inbox-ghost-line" style="width:120px"></div>
+                    <div class="fin-activity-row">
+                        <div class="fin-ghost-av"></div>
+                        <div>
+                            <div class="fin-ghost-line-sm" style="width:76px"></div>
+                            <div class="fin-ghost-line-sm" style="width:60px"></div>
+                        </div>
+                        <div class="fin-check">✓</div>
                     </div>
-                    <div class="inbox-fin-badge">Fin</div>
                 </div>
             </div>
             <div class="hero-location">
