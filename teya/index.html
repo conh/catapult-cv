@@ -23,6 +23,7 @@ img { max-width: 100%; display: block; }
 
 :root {
     --yellow:          #DFFF00;
+    --yellow-on-light: #6b7a00;
     --yellow-light:    rgba(223,255,0,0.10);
     --yellow-mid:      rgba(223,255,0,0.22);
     --amber:           #d4891a;
@@ -123,18 +124,18 @@ img { max-width: 100%; display: block; }
 
 /* SHARED SECTION */
 .section-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
-.section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.25rem; }
+.section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--yellow-on-light); margin-bottom: 1.25rem; }
 .section-title { font-family: var(--font-head); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; line-height: 1.15; color: var(--light-text); margin-bottom: 3rem; }
 .section-title-dark { color: var(--dark-text); }
-.accent-yellow { color: var(--yellow); }
+.accent-yellow { color: var(--yellow-on-light); }
 .accent-amber { color: var(--amber); }
 
 /* WHAT I DO */
 .pillars { background: var(--light-bg-2); border-top: 1px solid var(--light-border); border-bottom: 1px solid var(--light-border); }
 .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 .pillar-card { background: var(--light-bg); border: 1px solid var(--light-border); border-radius: 8px; padding: 1.75rem; transition: border-color 0.2s, box-shadow 0.2s; }
-.pillar-card:hover { border-color: var(--yellow); box-shadow: 0 4px 16px rgba(223,255,0,0.08); }
-.pillar-icon { color: var(--yellow); margin-bottom: 1rem; }
+.pillar-card:hover { border-color: var(--yellow-on-light); box-shadow: 0 4px 16px rgba(107,122,0,0.08); }
+.pillar-icon { color: var(--yellow-on-light); margin-bottom: 1rem; }
 .pillar-card h3 { font-size: 1rem; font-weight: 700; color: var(--light-text); margin-bottom: 0.5rem; }
 .pillar-card p { font-size: 0.875rem; color: var(--light-text-mid); line-height: 1.65; }
 
@@ -158,6 +159,7 @@ img { max-width: 100%; display: block; }
 
 /* STATS — dark, 6 col */
 .stats { background: var(--dark-bg-2); }
+.stats .section-label { color: var(--yellow); }
 .stats-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
 .stat-card { background: var(--dark-bg-3); border: 1px solid var(--dark-border); border-radius: 8px; padding: 1.5rem 1rem; text-align: center; transition: border-color 0.2s; }
 .stat-card:hover { border-color: var(--yellow); }
@@ -172,30 +174,30 @@ img { max-width: 100%; display: block; }
 .skills-col-head { font-family: var(--font-head); font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--light-text-dim); padding-bottom: 0.75rem; border-bottom: 1px solid var(--light-border); margin-bottom: 0.25rem; }
 .spec-row { display: grid; grid-template-columns: 56px 1fr 100px; gap: 12px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--light-border); }
 .spec-row:last-child { border-bottom: none; }
-.spec-code { font-family: var(--font-head); font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--yellow); }
+.spec-code { font-family: var(--font-head); font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--yellow-on-light); }
 .spec-name { font-size: 13px; font-weight: 500; color: var(--light-text); }
-.spec-track { height: 5px; background: rgba(223,255,0,0.12); border-radius: 3px; overflow: hidden; }
-.spec-bar { display: block; height: 100%; width: var(--w, 80%); background: linear-gradient(90deg, #DFFF00, #ecff4d); border-radius: 3px; }
+.spec-track { height: 5px; background: rgba(107,122,0,0.12); border-radius: 3px; overflow: hidden; }
+.spec-bar { display: block; height: 100%; width: var(--w, 80%); background: linear-gradient(90deg, #6b7a00, #8a9c00); border-radius: 3px; }
 
 /* Data in action */
 .dia-list { display: flex; flex-direction: column; gap: 0; }
 .dia-item { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--light-border); }
 .dia-item:last-child { border-bottom: none; }
-.dia-metric { font-family: var(--font-head); font-size: 1.4rem; font-weight: 900; color: var(--yellow); line-height: 1.1; padding-top: 2px; }
+.dia-metric { font-family: var(--font-head); font-size: 1.4rem; font-weight: 900; color: var(--yellow-on-light); line-height: 1.1; padding-top: 2px; }
 .dia-title { font-size: 13px; font-weight: 700; color: var(--light-text); margin-bottom: 4px; }
 .dia-desc { font-size: 12.5px; color: var(--light-text-mid); line-height: 1.6; }
 
 /* PROFESSIONAL SUMMARY */
 .summary { background: var(--light-bg-2); border-top: 1px solid var(--light-border); border-bottom: 1px solid var(--light-border); }
 .summary-layout { display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: start; }
-.big-quote { font-family: Georgia, serif; font-size: 96px; line-height: 0.8; color: rgba(223,255,0,0.12); margin-bottom: 8px; }
+.big-quote { font-family: Georgia, serif; font-size: 96px; line-height: 0.8; color: rgba(107,122,0,0.15); margin-bottom: 8px; }
 .summary-p { font-size: 14.5px; color: var(--light-text-mid); line-height: 1.8; margin-bottom: 18px; }
 .summary-p:last-child { margin-bottom: 0; }
-.verdict-card { background: var(--light-bg); border: 1px solid rgba(223,255,0,0.2); border-radius: 12px; padding: 1.5rem; position: sticky; top: 80px; }
-.verdict-head { font-family: var(--font-head); font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--yellow); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--light-border); }
+.verdict-card { background: var(--light-bg); border: 1px solid rgba(107,122,0,0.25); border-radius: 12px; padding: 1.5rem; position: sticky; top: 80px; }
+.verdict-head { font-family: var(--font-head); font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--yellow-on-light); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--light-border); }
 .verdict-item { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid var(--light-border); font-size: 13px; color: var(--light-text-mid); line-height: 1.5; }
 .verdict-item:last-child { border-bottom: none; }
-.verdict-tick { color: var(--yellow); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+.verdict-tick { color: var(--yellow-on-light); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
 
 /* CAREER */
 .career { background: var(--light-bg); }
@@ -204,11 +206,11 @@ img { max-width: 100%; display: block; }
 .tl-item:last-child { padding-bottom: 0; }
 .tl-item::before { content: ''; position: absolute; left: 8px; top: 24px; bottom: 0; width: 1px; background: var(--light-border); }
 .tl-item:last-child::before { display: none; }
-.tl-marker { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--yellow); background: var(--light-bg); margin-top: 4px; flex-shrink: 0; position: relative; z-index: 1; }
+.tl-marker { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--yellow-on-light); background: var(--light-bg); margin-top: 4px; flex-shrink: 0; position: relative; z-index: 1; }
 .tl-content { background: var(--light-bg-2); border: 1px solid var(--light-border); border-radius: 8px; padding: 1.5rem; transition: border-color 0.2s, box-shadow 0.2s; }
-.tl-content:hover { border-color: var(--yellow); box-shadow: 0 4px 16px rgba(223,255,0,0.07); }
+.tl-content:hover { border-color: var(--yellow-on-light); box-shadow: 0 4px 16px rgba(107,122,0,0.07); }
 .tl-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem; flex-wrap: wrap; gap: 0.5rem; }
-.tl-company { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: var(--yellow); letter-spacing: 0.02em; }
+.tl-company { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: var(--yellow-on-light); letter-spacing: 0.02em; }
 .tl-period { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: var(--light-text-dim); font-variant-numeric: tabular-nums; }
 .tl-role { font-size: 0.9rem; font-weight: 600; color: var(--light-text); margin-bottom: 0.75rem; }
 .tl-desc { font-size: 0.875rem; color: var(--light-text-mid); line-height: 1.65; margin-bottom: 1rem; }
