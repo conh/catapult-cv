@@ -636,19 +636,28 @@ ul { list-style: none; }
     margin-top: 8px;
 }
 
-.chart-wrap {
-    position: relative;
-    height: 260px;
+.skills-plain {
+    display: flex;
+    align-items: center;
+}
+
+.skills-label-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     width: 100%;
 }
 
-.chart-disclaimer {
-    font-size: 10px;
-    color: #9ca3af;
-    font-style: italic;
-    margin-top: 10px;
-    text-align: left;
-    line-height: 1.5;
+.skills-label-list li {
+    font-family: var(--f-head);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--purple);
+    padding-left: 18px;
+    border-left: 3px solid var(--purple);
+    line-height: 1.2;
 }
 
 /* Data in Action panel */

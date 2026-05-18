@@ -1,79 +1,4 @@
 /* ============================================
-   HORIZONTAL BAR CHART
-============================================ */
-function initBarChart() {
-    const canvas = document.getElementById('barChart');
-    if (!canvas) return;
-
-    new Chart(canvas.getContext('2d'), {
-        type: 'bar',
-        data: {
-            labels: [
-                'GTM Strategy and Planning',
-                'Positioning and Messaging',
-                'Function Building and Transformation',
-                'Cross-Functional Leadership',
-                'Sales Enablement',
-                'Segmentation and ICP'
-            ],
-            datasets: [{
-                data: [95, 93, 91, 90, 88, 87],
-                backgroundColor: [
-                    'rgba(0,168,120,0.85)',
-                    'rgba(0,168,120,0.75)',
-                    'rgba(0,168,120,0.70)',
-                    'rgba(0,201,143,0.75)',
-                    'rgba(0,201,143,0.65)',
-                    'rgba(0,201,143,0.60)',
-                ],
-                borderColor: 'transparent',
-                borderRadius: 4,
-                borderSkipped: false,
-            }]
-        },
-        options: {
-            indexAxis: 'y',
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    backgroundColor: '#111827',
-                    titleColor: '#00c98f',
-                    bodyColor: '#c4cde0',
-                    borderColor: 'rgba(0,168,120,0.3)',
-                    borderWidth: 1,
-                    callbacks: {
-                        label: ctx => '  ' + ctx.raw + ' / 99'
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    min: 60,
-                    max: 99,
-                    grid: { color: 'rgba(255,255,255,0.05)' },
-                    ticks: {
-                        color: '#7888a8',
-                        font: { family: "'Inter', sans-serif", size: 11 },
-                        stepSize: 10
-                    },
-                    border: { color: 'rgba(255,255,255,0.07)' }
-                },
-                y: {
-                    grid: { display: false },
-                    ticks: {
-                        color: '#c4cde0',
-                        font: { family: "'Inter', sans-serif", size: 12, weight: '500' }
-                    },
-                    border: { display: false }
-                }
-            }
-        }
-    });
-}
-
-/* ============================================
    ATTRIBUTE BAR ANIMATIONS
 ============================================ */
 function initAttrBars() {
@@ -154,7 +79,6 @@ function initScrollFade() {
    INIT
 ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
-    initBarChart();
     initAttrBars();
     initCounters();
     initScrollFade();
